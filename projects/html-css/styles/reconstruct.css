@@ -1,0 +1,84 @@
+/* CSS document for 'Reconstruct', DotW Project1 */
+
+@import url('https://fonts.googleapis.com/css?family=Reenie+Beanie');
+
+#container {
+  width: 100%;
+  margin: auto;
+}
+
+/*body {
+  background: snow url('../images/floor-1.gif') left bottom;
+}*/
+
+audio {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+}
+
+#floor4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  z-index: 4
+}
+
+#floor3 {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  z-index: 3
+}
+
+#floor2 {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  z-index: 2
+}
+
+#floor1 {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  width: 100%;
+  z-index: 1
+}
+
+
+/* Footer Nav */
+
+footer {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  position: fixed;
+  bottom: 0.5em;
+  left: 1em;
+  z-index: 5;
+}
+
+svg {
+  margin: 20px;
+}
+
+.icons {
+  fill: none;
+  width: 3em;
+  height: 3em;
+  stroke: white;
+  stroke-width: 8;
+  stroke-miterlimit: 3;
+}
+
+
+/* Link States */
+
+a {
+  color: snow;
+}

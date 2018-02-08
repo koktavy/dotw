@@ -1,0 +1,64 @@
+/* Main Javascript project CSS */
+
+body {
+  margin: auto;
+  padding: 5%;
+  border: 5px solid gold;
+  background: midnightblue;
+}
+
+/* Individual placement */
+#wave1 {
+  transform: translate(-50px);
+}
+#wave2 {
+  transform: translate(110px, -10px);
+}
+#wave3 {
+  transform: translate(270px, -20px);
+}
+#wave4 {
+  transform: translate(430px, -30px);
+}
+#wave5 {
+  transform: translate(600px, -35px);
+}
+
+
+/* ------------------------------ */
+
+/* Collective adjustment (Now JS) */
+/*.wave {
+  transform:
+    scale(1.2)
+    rotateX(70deg)
+    rotateY(-4deg)
+    translate(-380px, 1000px)
+    skew(30deg);
+}*/
+
+/* Fix orientation??? */
+/* Footer Nav */
+
+/*footer {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  position: fixed;
+  bottom: 500px;
+  left: 1em;
+  z-index: 5;
+}
+
+svg {
+  margin: 20px;
+}
+
+.icons {
+  fill: none;
+  width: 3em;
+  height: 3em;
+  stroke: white;
+  stroke-width: 8;
+  stroke-miterlimit: 3;
+}*/

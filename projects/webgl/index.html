@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Communication</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: grey;
+      }
+
+      h1 {
+        margin: 1em;
+        padding: 0;
+        text-align: center;
+      }
+
+      #print {
+        display: none;
+      }
+
+      @media print {
+        #print {
+          display: block;
+        }
+
+        #container {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container"></div>
+    <div id="print">
+      <h1>Hello, printWorld!</h1>
+      <img src="images/bestcat.jpg" width="800" height="640" alt="The cat seems to be lost in space... A vaguely audible synth drones in the background.">
+      <h1>Visit <a href="http://i6.cims.nyu.edu/~tkk269/dotw/">my homepage</a> for more.</h1>
+    </div>
+
+      <script src="js/p5.min.js"></script>
+      <script src="js/three.min.js"></script>
+      <script src="js/OrbitControls.js"></script>
+      <script src="js/message.js"></script>
+  </body>
+</html>

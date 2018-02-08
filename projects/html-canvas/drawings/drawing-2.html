@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Listening</title>
+
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Rokkitt');
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+      }
+
+      h1 {
+        margin: 0;
+        padding: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        text-align: center;
+        line-height: 2;
+        font-family: "Rokkitt", serif;
+        transform: translate(-50%, -50%);
+        border: 4px double black;
+      }
+
+      #textA {
+        color: black;
+      }
+
+      #textB {
+        color: gray;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <canvas id="drawing" width="600" height="450">
+      Your browser does support HTML canvas elements...
+    </canvas>
+    <div>
+      <h1 id="textA">If art is in a room and no one is around to see it,</h1>
+      <h1 id="textB">does it still evoke emotion?</h1>
+    </div>
+
+    <script src="../js/p5.min.js"></script>
+    <script src="../js/drawing-2.js"></script>
+  </body>
+</html>

@@ -1,0 +1,284 @@
+/* Main CSS for Voices project directory */
+
+/* Use a sprite sheet to load all images at once??? */
+
+@keyframes spin {
+  from {transform: rotateY(0deg);}
+  to {transform: rotateY(-360deg);}
+}
+
+/* How to make this a continuous spin??? */
+@keyframes spin2 {
+    0%,9%   {transform: rotateY(45deg);  }
+    12%,21% {transform: rotateY(90deg);  }
+    24%,31% {transform: rotateY(135deg); }
+    34%,43% {transform: rotateY(180deg); }
+    46%,55% {transform: rotateY(225deg); }
+    58%,67% {transform: rotateY(270deg); }
+    70%,79% {transform: rotateY(315deg); }
+    82%,91% {transform: rotateY(360deg); }
+    98%,100% {transform: rotateY(45deg); }
+}
+
+#container {
+  width: 200px;
+  height: 250px;
+  margin: auto;
+  margin-top: 200px;
+  perspective: 650px;
+  perspective-origin: center center;
+}
+
+/* Inner octagon */
+.inner {
+  animation-name: spin;
+  animation-duration: 45s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  position: relative;
+  height: 200px;
+  width: 200px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.inner:active {
+  animation-play-state: paused;
+  transform: scale(3, 3);
+}
+
+div.inner > div {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-size: 200px 200px;
+}
+
+.front {
+  background-image: url('../images/protest-1.jpg');
+  background-color: red;
+  transform: translateZ(240px);
+}
+
+.front:hover {
+  background-image: url('../images/2protest-1.jpg');
+}
+
+.front-right {
+  background-image: url('../images/protest-2.jpg');
+  background-color: orange;
+  transform: translateZ(100px) translateX(140px) rotateY(45deg);
+  transform-origin: bottom right;
+}
+
+.front-right:hover {
+  background-image: url('../images/2protest-2.jpg');
+}
+
+.right {
+  background-image: url('../images/protest-3.jpg');
+  background-color: yellow;
+  transform: rotateY(-270deg) translateX(100px) translateZ(140px);
+  transform-origin: bottom right;
+}
+
+.right:hover {
+  background-image: url('../images/2protest-3.jpg');
+}
+
+.back-right {
+  background-image: url('../images/protest-4.jpg');
+  background-color: green;
+  transform: translateZ(-100px) translateX(140px) rotateY(-45deg);
+  transform-origin: bottom right;
+}
+
+.back-right:hover {
+  background-image: url('../images/2protest-4.jpg');
+}
+
+.back {
+  background-image: url('../images/protest-5.jpg');
+  background-color: blue;
+  transform: translateZ(-240px) rotateY(180deg);
+}
+
+.back:hover {
+  background-image: url('../images/2protest-5.jpg');
+}
+
+.back-left {
+  background-image: url('../images/protest-6.jpg');
+  background-color: purple;
+  transform: translateZ(-240px) rotateY(225deg);
+  transform-origin: bottom left;
+}
+
+.back-left:hover {
+  background-image: url('../images/2protest-6.jpg');
+}
+
+.left {
+  background-image: url('../images/protest-7.jpg');
+  background-color: grey;
+  transform: rotateY(270deg) translateX(-100px) translateZ(140px);
+  transform-origin: bottom left;
+}
+
+.left:hover {
+  background-image: url('../images/2protest-7.jpg');
+}
+
+.front-left {
+  background-image: url('../images/protest-8.jpg');
+  background-color: black;
+  transform: translateZ(100px) translateX(-140px) rotateY(-45deg);
+  transform-origin: bottom left;
+}
+
+.front-left:hover {
+  background-image: url('../images/2protest-8.jpg');
+}
+
+
+
+/* Outer octagon */
+.outer {
+  z-index: -1;
+  animation-name: spin2;
+  animation-duration: 45s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+
+  position: relative;
+  height: 200px;
+  width: 200px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.outer:active {
+  animation-play-state: paused;
+}
+
+div.outer > div {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  background-size: 200px 200px;
+}
+
+.o-front {
+  background-image: url('../images/protest-a.jpg');
+  background-color: red;
+  transform: translateZ(240px);
+}
+
+.o-front:hover {
+  background-image: url('../images/2protest-a.jpg');
+}
+
+.o-front-right {
+  background-image: url('../images/protest-b.jpg');
+  background-color: orange;
+  transform: translateZ(100px) translateX(140px) rotateY(45deg);
+  transform-origin: bottom right;
+}
+
+.o-front-right:hover {
+  background-image: url('../images/2protest-b.jpg');
+}
+
+.o-right {
+  background-image: url('../images/protest-c.jpg');
+  background-color: yellow;
+  transform: rotateY(-270deg) translateX(100px) translateZ(140px);
+  transform-origin: bottom right;
+}
+
+.o-right:hover {
+  background-image: url('../images/2protest-c.jpg');
+}
+
+/* Why is this one backwards??? */
+.o-back-right {
+  background-image: url('../images/protest-d.jpg');
+  background-color: green;
+  transform: translateZ(-100px) translateX(140px) rotateY(-45deg);
+  transform-origin: bottom right;
+}
+
+.o-back-right:hover {
+  background-image: url('../images/2protest-d.jpg');
+}
+
+.o-back {
+  background-image: url('../images/protest-e.jpg');
+  background-color: blue;
+  transform: translateZ(-240px) rotateY(180deg); /* Back face now faces outwards */
+}
+
+.o-back:hover {
+  background-image: url('../images/2protest-e.jpg');
+}
+
+.o-back-left {
+  background-image: url('../images/protest-f.jpg');
+  background-color: purple;
+  transform: translateZ(-240px) rotateY(225deg);
+  transform-origin: bottom left;
+}
+
+.o-back-left:hover {
+  background-image: url('../images/2protest-f.jpg');
+}
+
+.o-left {
+  background-image: url('../images/protest-g.jpg');
+  background-color: grey;
+  transform: rotateY(270deg) translateX(-100px) translateZ(140px);
+  transform-origin: bottom left;
+}
+
+.o-left:hover {
+  background-image: url('../images/2protest-g.jpg');
+}
+
+.o-front-left {
+  background-image: url('../images/protest-h.jpg');
+  background-color: black;
+  transform: translateZ(100px) translateX(-140px) rotateY(-45deg);
+  transform-origin: bottom left;
+}
+
+.o-front-left:hover {
+  background-image: url('../images/2protest-h.jpg');
+}
+
+
+/* Fix orientation??? */
+/* Footer Nav */
+
+/*footer {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  position: fixed;
+  bottom: 500px;
+  left: 1em;
+  z-index: 5;
+}
+
+svg {
+  margin: 20px;
+}
+
+.icons {
+  fill: none;
+  width: 3em;
+  height: 3em;
+  stroke: white;
+  stroke-width: 8;
+  stroke-miterlimit: 3;
+}*/

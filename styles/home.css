@@ -1,0 +1,165 @@
+/* Main CSS for "Welcome Home" portfolio directory */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
+@import url('https://fonts.googleapis.com/css?family=Reenie+Beanie');
+
+/* Layout */
+
+#container {
+  width: 80%;
+  padding: 10%;
+  height: 100%;
+  position: relative;
+}
+
+body {
+  background-image: url("../images/backgrounds/bg0.jpg");
+  background-position: bottom right;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  z-index: -2;
+}
+
+h2 {
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  top: 3%;
+  font-family: "Lato", "Open Sans", sans-serif;
+}
+
+h2:hover {
+  font-size: 154%;
+  transition-duration: 0.4s;
+}
+
+main {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  width: 80%;
+  position: absolute;
+}
+
+.polaroid {
+  position: relative;
+  width: 175px;
+  height: 225px;
+  background: black;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 2em;
+  z-index: 1;
+  transition: background 450ms ease-out 15ms, transform 0.8s ease-out 15ms, font-size 250ms ease-in-out 15ms;
+}
+
+.polaroid:hover {
+  background-color: white;
+  transition-duration: 0s;
+}
+
+#project1 {
+  background-image: url("../images/floor-2.gif");
+  background-size: 105px;
+  z-index: 2;
+}
+
+#project1:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transition-duration: 0.2s;
+}
+
+#project2 {
+  background-image: url("../images/icons-set.png");
+  background-size: 175px;
+  z-index: 2;
+}
+
+#project3 {
+}
+
+#project3:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  transform: rotateZ(8deg) rotateY(-17deg);
+  transition-duration: .3s;
+}
+
+#project4 {
+  background-image: url("../images/octocat.png");
+  background-size: 175px;
+  z-index: 2;
+}
+
+#project5 {
+  background-image: url("../images/drift-sunset.png");
+  background-size: 175px;
+  z-index: 2;
+}
+
+#project5:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transition-duration: 0.2s;
+}
+
+#project6 {
+  background-image: url("../images/aurora.png");
+  background-size: 175px;
+  z-index: 2;
+}
+
+#project6:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transition-duration: 0.2s;
+}
+
+#project7 {
+  background-image: url("../images/printer.png");
+  background-size: 170px;
+  z-index: 2;
+}
+
+#project7:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transition-duration: 0.2s;
+}
+
+#final {
+  background-size: 330px;
+  z-index: 2;
+}
+
+#title {
+  background-color: rgba(0, 0, 0, 0.65);
+  width: 175px;
+  height: 225px;
+  background-size: 185px;
+  z-index: 2;
+}
+
+.caption {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 2em;
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 81%;
+  z-index: 3;
+}
+
+/* Link States */
+
+a:link, a:visited {
+  color: #406085;
+  text-decoration: none;
+}
+
+a:hover {
+  color: lightgrey;
+}
+
+a:active {
+  color: rgba(255, 255, 255, 0.3);
+}

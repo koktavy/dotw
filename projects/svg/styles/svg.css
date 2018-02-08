@@ -1,0 +1,44 @@
+/* Main CSS for "SVG Set" project directory */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
+
+body {
+  background-color: #12A260;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Lato", "Open Sans", sans-serif;
+  color: #000000;
+}
+
+#container {
+  padding: 10%;
+  height: 500px;
+  width: 80%;
+  /*background-color: #078049;*/
+  position: relative;
+}
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 80%;
+  background-color: #12A260;
+  position: absolute;
+}
+
+svg {
+  margin: 20px;
+}
+
+.icons {
+  fill: none;
+  width: 3em;
+  height: 3em;
+  stroke: black;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-miterlimit: 3;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Drift</title>
+    <link rel="stylesheet" href="styles/javascript-style.css">
+  </head>
+
+<!-- With inspiration from Raphael Rozendaal's projects:
+     http://www.everythingalwayseverywhere.com/
+and  http://www.sinkslow.com/               -->
+
+  <body>
+    <container>
+      <svg width='800' height='800'>
+
+        <!-- Filters -->
+        <defs>
+          <filter id='my-filters' x='0' y='0'>
+            <feGaussianBlur in ='SourceGraphic' stdDeviation='1.5' />
+            <feColorMatrix type='saturate' values='1.4' />
+            <!-- <feColorMatrix type='hueRotate' values='180' /> -->
+          </filter>
+        </defs>
+
+        <!-- Gradients -->
+        <defs>           <!-- Waves -->
+          <linearGradient id='waves' x1='60%' y1='0%' x2='50%' y2='80%'>
+            <stop offset='2%' stop-color='orange' stop-opacity='0.9' />
+            <stop offset='6%' stop-color='gold' stop-opacity='0.9' />
+            <stop offset='65%' stop-color='mediumturquoise' stop-opacity='0.95' />
+            <stop offset='93%' stop-color='cyan' stop-opacity='0.95' />
+            <stop offset='100%' stop-color='seashell' stop-opacity='0.25' />
+          </linearGradient>
+        </defs>
+        <defs>           <!-- Sky -->
+          <linearGradient id='sky' x1='0%' y1='0%' x2='0%' y2='100%'>
+            <stop offset='0%' stop-color='mediumturquoise' stop-opacity='1' />
+            <stop offset='15%' stop-color='skyblue' stop-opacity='1' />
+            <stop offset='50%' stop-color='aqua' stop-opacity='1' />
+            <stop offset='100%' stop-color='orange' stop-opacity='1' />
+          </linearGradient>
+        </defs>
+        <defs>           <!-- Clouds -->
+          <linearGradient id='clouds' x1='0%' y1='0%' x2='0%' y2='90%'>
+            <stop offset='0%' stop-color='white' stop-opacity='0' />
+            <stop offset='15%' stop-color='ivory' stop-opacity='0.2' />
+            <stop offset='30%' stop-color='white' stop-opacity='0.3' />
+            <stop offset='45%' stop-color='ivory' stop-opacity='0.2' />
+            <stop offset='60%' stop-color='white' stop-opacity='0.3' />
+            <stop offset='75%' stop-color='ivory' stop-opacity='0.2' />
+            <stop offset='90%' stop-color='white' stop-opacity='0.1' />
+            <stop offset='100%' stop-color='beige' stop-opacity='0' />
+          </linearGradient>
+        </defs>
+        <defs>           <!-- Sea -->
+          <linearGradient id='sea' x1='0%' y1='0%' x2='0%' y2='60%'>
+            <stop offset='0%' stop-color='darkcyan' stop-opacity='0.98' />
+            <stop offset='100%' stop-color='aqua' stop-opacity='1' />
+          </linearGradient>
+        </defs>
+        <defs>           <!-- Sun -->
+          <linearGradient id='sun' x1='20%' y1='0%' x2='30%' y2='90%'>
+            <stop offset='10%' stop-color='yellow' stop-opacity='1' />
+            <stop offset='25%' stop-color='gold' stop-opacity='1' />
+            <stop offset='65%' stop-color='orange' stop-opacity='1' />
+            <stop offset='100%' stop-color='orangered' stop-opacity='0.95' />
+          </linearGradient>
+        </defs>
+        <defs>           <!-- Sand -->
+          <linearGradient id='sand' x1='0%' y1='0%' x2='40%' y2='80%'>
+            <stop offset='30%' stop-color='bisque' stop-opacity='0.5' />
+            <stop offset='85%' stop-color='burlywood' stop-opacity='1' />
+            <stop offset='100%' stop-color='sandybrown' stop-opacity='0.95' />
+          </linearGradient>
+        </defs>
+
+        <!-- Primitives -->
+          <!-- Sky -->
+        <polygon points='0,0 0,500 800,470 800,0' fill='url(#sky)' />
+          <!-- Clouds -->
+        <polygon points='0,0 0,140 800,160 800,30' fill='url(#clouds)' filter='url(#my-filters)'/>
+          <!-- Sun -->
+        <g>
+          <a href="rad.html"><circle id='spicy' cx='270' cy='235' r='200' fill='url(#sun)' filter='url(#my-filters)'/></a>
+        </g>
+          <!-- Sea -->
+        <polygon points='0,450 0,800 800,800 800,440' fill='url(#sea)' filter='url(#my-filters)'/>
+          <!-- Beach -->
+        <polygon points='0,660 0,800 800,800 800,580' fill='url(#sand)' />
+          <!-- Waves -->
+        <g id='1'>
+          <polygon id='wave1' points='0,480 0,640 140,720 280,640 280,480 140,400' fill='url(#waves)' fill-opacity='0.8' />
+        </g>
+        <g id='2'>
+          <polygon id='wave2' points='0,480 0,640 140,720 280,640 280,480 140,400' fill='url(#waves)' fill-opacity='0.8' />
+        </g>
+        <g id='3'>
+          <polygon id='wave3' points='0,480 0,640 140,720 280,640 280,480 140,400' fill='url(#waves)' fill-opacity='0.8' />
+        </g>
+        <g id='4'>
+          <polygon id='wave4' points='0,480 0,640 140,720 280,640 280,480 140,400' fill='url(#waves)' fill-opacity='0.8' />
+        </g>
+        <g id='5'>
+          <polygon id='wave5' points='0,480 0,640 140,720 280,640 280,480 140,400' fill='url(#waves)' fill-opacity='0.8' />
+        </g>
+      </svg>
+    </container>
+    <script src="javascript.js"></script>
+  </body>
+
+</html>

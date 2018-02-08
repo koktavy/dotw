@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome Home</title>
+    <link rel="stylesheet" href="styles/home.css">
+
+    <!-- Load jQuery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+
+    <!-- jQuery for random backgrounds -->
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var bgArray = ['bg0.jpg', 'bg1.jpg', 'bg2.jpg', 'bg3.jpg', 'bg4.jpg', 'bg5.jpg'];
+        var bg = bgArray[Math.floor(Math.random() * bgArray.length)];
+
+        $('body').css({
+          // Note that this is the path from this HTML file location, not CSS.
+          'background-image': 'url("images/backgrounds/' + bg + '")',
+          'background-repeat': 'no-repeat'
+        });
+
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="container">
+
+      <main>
+        <div class="polaroid" id="project1">
+          <a ondblclick="projects/html-css/"><img src="images/polaroid.png" width="175" height="225" alt="HTML and CSS visual link, gifs of buildings in snow."></a>
+          <p class="caption">HTML+CSS</p>
+        </div>
+
+        <div class="polaroid" id="project2">
+          <a href="projects/svg/"><img src="images/polaroid.png" width="175" height="225" alt="SVG visual link, icon sample set."></a>
+          <p class="caption">SVG</p>
+        </div>
+
+        <div class="polaroid" id="project3">
+          <a href="projects/css-animation/"><img src="images/polaroid.png" width="175" height="225" alt="CSS Animation visual link, animated window."></a>
+          <p class="caption">CSS Animation</p>
+        </div>
+
+        <div class="polaroid" id="project4">
+          <a href="https://github.com/kotavy" target="_blank"><img src="images/polaroid.png" width="175" height="225" alt="Version Control visual link, github cutout."></a>
+          <p class="caption">Version Control</p>
+        </div>
+
+        <div class="polaroid" id="project5">
+          <a href="projects/javascript/"><img src="images/polaroid.png" width="175" height="225" alt="JavaScript visual link, sunset."></a>
+          <p class="caption">JavaScript</p>
+        </div>
+
+        <div class="polaroid" id="project6">
+          <a href="projects/html-canvas/"><img src="images/polaroid.png" width="175" height="225" alt="HTML Canvas visual link."></a>
+          <p class="caption">HTML Canvas</p>
+        </div>
+
+        <div class="polaroid" id="project7">
+          <a href="projects/webgl/"><img src="images/polaroid.png" width="175" height="225" alt="WebGL visual link."></a>
+          <p class="caption">WebGL</p>
+        </div>
+
+        <div class="polaroid" id="final">
+          <a href="projects/final/"><img src="images/polaroid.png" width="175" height="225" alt="Final Project visual link."></a>
+          <p class="caption">Final</p>
+        </div>
+
+        <div class="polaroid" id="title">
+          <a href="./"><img src="images/polaroid.png" width="175" height="225" alt="Final Project visual link."><h2>Drawing on the Web</h2></a>
+          <p class="caption">- Tavius K.</p>
+        </div>
+      </main>
+
+    </div> <!-- #container -->
+  </body>
+
+</html>
