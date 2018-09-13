@@ -125,8 +125,14 @@ main {
 }
 
 #final {
+  background-image: url("../images/final.png");
   background-size: 330px;
   z-index: 2;
+}
+
+#final:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transition-duration: 0.2s;
 }
 
 #title {
