@@ -14,7 +14,8 @@ var waves = [w1, w2, w3, w4, w5];
 var direction = 0;
 
 // Start the sunset() when the mouse crosses the sun.
-sun.addEventListener('mouseenter', sunset);
+sun.addEventListener('mouseenter', sunset, {once: true});
+sun.addEventListener('click', sunset, {once: true});
 
 // Initiate sunset.
 function sunset() {
@@ -44,16 +45,16 @@ var makeWaves = setInterval(tide, 20);
 // Loop over waves incrementing each a little.
 function tide() {
   checkDirection();
-  if (direction == 0) {
+  if (direction === 0) {
     size -= 0.0008;
   } else {
     size += 0.0008;
   }
-  // console.log(size);
   for (i = 0; i < waves.length; i++) {
-    waves[i].style.transform = 'scale(' + (size + (Math.random() * 0.002)) + ')' + details;
-    // Modularize: make each wave a class of its own, with independent direction properties.
-    // console.log(waves[i]);
+    // Stagger the wave updates to create more of a "washing up" effect
+    setTimeout(() => {
+        waves[i].style.transform = 'scale(' + (size + (Math.random() * 0.002)) + ')' + details;
+    }, i * 250)
   }
 }
 
